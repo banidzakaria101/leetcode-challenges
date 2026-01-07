@@ -3,7 +3,6 @@ var maxProduct = function(root) {
   let totalSum = 0;
   let maxProd = 0;
 
-  // First DFS: compute total sum
   function getTotalSum(node) {
     if (!node) return 0;
     totalSum += node.val;
@@ -11,7 +10,6 @@ var maxProduct = function(root) {
     getTotalSum(node.right);
   }
 
-  // Second DFS: compute subtree sums & products
   function dfs(node) {
     if (!node) return 0;
 
