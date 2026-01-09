@@ -13,7 +13,6 @@ var subtreeWithAllDeepest = function(root) {
       return [rightDepth + 1, rightNode];
     }
 
-    // equal depth → this node is LCA of deepest nodes
     return [leftDepth + 1, node];
   }
 
