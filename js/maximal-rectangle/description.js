@@ -6,12 +6,10 @@ var maximalRectangle = function(matrix) {
   let maxArea = 0;
 
   for (let row of matrix) {
-    // Build histogram
     for (let j = 0; j < cols; j++) {
       heights[j] = row[j] === '1' ? heights[j] + 1 : 0;
     }
 
-    // Calculate largest rectangle in histogram
     maxArea = Math.max(maxArea, largestRectangleArea(heights));
   }
 
@@ -21,7 +19,7 @@ var maximalRectangle = function(matrix) {
 function largestRectangleArea(heights) {
   let stack = [];
   let maxArea = 0;
-  heights.push(0); // Sentinel
+  heights.push(0);
 
   for (let i = 0; i < heights.length; i++) {
     while (stack.length && heights[i] < heights[stack[stack.length - 1]]) {
