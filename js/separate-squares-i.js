@@ -14,7 +14,7 @@ var findLine = function(squares) {
   let low = minY;
   let high = maxY;
 
-  for (let i = 0; i < 60; i++) { // enough for precision
+  for (let i = 0; i < 60; i++) { 
     const mid = (low + high) / 2;
     let areaBelow = 0;
 
