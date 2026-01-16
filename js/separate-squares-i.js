@@ -31,4 +31,6 @@ var findLine = function(squares) {
   }
 
   return low;
+
 };
+
